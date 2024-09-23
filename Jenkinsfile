@@ -8,10 +8,7 @@ pipeline {
                   sh 'npm i' 
                   sh  'npm run build' 
               } 
-              
           }
-
-          
           stage('deploy') {
               steps {
                   echo 'Deploying the softwares'
