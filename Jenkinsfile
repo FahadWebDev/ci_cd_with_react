@@ -11,14 +11,11 @@ pipeline {
                 echo 'Building the software'
                 // sh 'npm i'
                 // sh  'npm run build'
-                // MAKE ZIP OF DIST AND COPY INTO FOLDER (IN SINGLE SH COMMAND)
                  sh '''
                     cd dist
                     zip -r frontend-build.zip *
                     cp frontend-build.zip /var/www/frontend/
                  '''
-                // MAKE ZIP OF DIST AND COPY INTO FOLDER (IN MULTIPLE SH COMMAND)
-                // sh 'cd dist && zip -r frontend-build.zip * && cp frontend-build.zip /var/www/frontend/'
             } 
         }
         stage('deploy') {
