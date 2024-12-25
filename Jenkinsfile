@@ -4,8 +4,8 @@ pipeline {
         stage('build') {
             steps {
                 echo 'Building the software'
-                // bat 'npm install'
-                // bat 'npm run build'
+                sh 'npm i'
+                sh  'npm run build'
             } 
         }
         stage('deploy') {
