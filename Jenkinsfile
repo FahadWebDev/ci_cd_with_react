@@ -12,7 +12,7 @@ pipeline {
                 // sh 'npm i'
                 // sh  'npm run build'
                 
-                sh 'cd dist && zip -r frontend-build.zip * '
+                sh 'cd dist && pwd && zip -r frontend-build.zip * '
                 sh 'pwd'
                 sh 'cp dist/frontend-build.zip /var/www/frontend/'
             } 
