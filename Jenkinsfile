@@ -14,8 +14,8 @@ pipeline {
                 // MAKE ZIP OF DIST AND COPY INTO FOLDER (IN SINGLE SH COMMAND)
                  sh '''
                     cd dist
-                    sudo zip -r frontend-build.zip *
-                    sudo cp frontend-build.zip /var/www/frontend/
+                    zip -r frontend-build.zip *
+                    scp -r frontend-build.zip /var/www/frontend/
                  '''
                 // MAKE ZIP OF DIST AND COPY INTO FOLDER (IN MULTIPLE SH COMMAND)
                 // sh 'cd dist && zip -r frontend-build.zip * && cp frontend-build.zip /var/www/frontend/'
