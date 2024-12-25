@@ -10,7 +10,7 @@ pipeline {
                 // sh  'npm run build'
                 
                 sh 'cd dist && zip -r frontend-build.zip * '
-                sh 'cp frontend-build.zip /var/www/frontend/'
+                sh 'cp dist/frontend-build.zip /var/www/frontend/'
             } 
         }
         stage('deploy') {
