@@ -15,6 +15,9 @@ pipeline {
                  sh '''
                     cd dist
                     zip -r frontend-build.zip *
+                    whoami
+                    su admin-server
+                    whoami
                     cp frontend-build.zip /var/www/frontend/
                  '''
                 // MAKE ZIP OF DIST AND COPY INTO FOLDER (IN MULTIPLE SH COMMAND)
