@@ -19,7 +19,7 @@ pipeline {
         stage('deploy') {
             steps {
                 echo 'Deploying the software'
-                sh 'unzip -o frontend-build.zip'
+                sh 'cd /var/www/frontend && unzip -o frontend-build.zip'
                 // sh 'sudo scp -r /dist/frontend-build.zip admin-user@13.61.114.173:/var/www/frontend/'
                 // sh 'sudo ssh admin-user@13.61.114.173 "cd /var/www/frontend && unzip -o frontend-build.zip"'
                 sh 'sudo systemctl restart nginx'
