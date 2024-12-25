@@ -3,6 +3,11 @@ pipeline {
 
 
     stages {
+        stage('Check User') {
+            steps {
+                sh 'whoami'
+            }
+        }
         stage('build') {
             steps {
                 echo 'Building the software'
