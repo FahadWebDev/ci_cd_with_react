@@ -11,7 +11,6 @@ pipeline {
                 echo 'Building the software'
                 // sh 'npm i'
                 // sh  'npm run build'
-
                 // MAKE ZIP OF DIST AND COPY INTO FOLDER (IN SINGLE SH COMMAND)
                  sh '''
                     cd dist
