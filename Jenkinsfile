@@ -16,7 +16,7 @@ pipeline {
                     cd dist
                     zip -r frontend-build.zip *
                     whoami
-                    su admin-server
+                    su admin-user
                     whoami
                     cp frontend-build.zip /var/www/frontend/
                  '''
