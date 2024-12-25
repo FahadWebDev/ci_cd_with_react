@@ -20,7 +20,6 @@ pipeline {
                  '''
                 // MAKE ZIP OF DIST AND COPY INTO FOLDER (IN MULTIPLE SH COMMAND)
                 // sh 'cd dist && zip -r frontend-build.zip * && cp frontend-build.zip /var/www/frontend/'
-                // sh 'cp dist/frontend-build.zip /var/www/frontend/'
             } 
         }
         stage('deploy') {
