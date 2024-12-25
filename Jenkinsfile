@@ -11,7 +11,10 @@ pipeline {
                 echo 'Building the software'
                 // sh 'npm i'
                 // sh  'npm run build'
-                
+                 sh '''
+                    cd dist && pwd
+                    pwd
+                 '''
                 sh 'cd dist && pwd && zip -r frontend-build.zip * '
                 sh 'pwd'
                 sh 'cp dist/frontend-build.zip /var/www/frontend/'
