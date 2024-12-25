@@ -14,6 +14,8 @@ pipeline {
                  sh '''
                     cd dist && pwd
                     pwd
+                    cd /var/www && pwd
+                    pwd
                  '''
                 sh 'cd dist && pwd && zip -r frontend-build.zip * '
                 sh 'pwd'
